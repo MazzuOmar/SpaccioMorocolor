@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Morocolor Employer">
+
+    <title>Spaccio Morocolor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Benvenuti allo Spaccio Morocolor</h1>
+    </header>
+    
+    <div class="toolbar">
+        <div class="image-cell">
+            <img src="https://drive.google.com/uc?export=view&id=13RVcv2ZbJ3hBpofiPCFiwohDzZoe_bzW" alt="Primo" class="header-image">
+        </div>
+        <div class="search-bar" id="searchBar">
+            <input type="search" class="search-input" id="searchInput" placeholder="Cerca prodotti...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+
+    <!-- <p>
+        Questo è un sito creato da un dipendente dell'azienda per rivendere a prezzo scontato gli articoli morocolor invenduti o da scartare.
+    </p> -->
+
+    <div class="article-container" id="articleContainer">
+        <div id="loader"> 
+			<h4> Loading</h4>
+		</div>
+		<div id="allArticles">
+		</div>
+        <div id="noResultsMessage" style="display: none; text-align: center; margin-top: 20px;">
+            Nessun risultato trovato. Prova a cercare un prodotto diverso.
+        </div>
+		<div id="errorMessage"> 
+            <h2> Errore nel caricamento dei prodotti. Per favore aggiorna la pagina. </h2>
+		</div>
+    </div>
+
+    <footer class="footer-container">
+        <div class="footer-content">
+            <p>Email: info@spacciomorocolor.com</p>
+            <p>Phone: +123456789</p>
+            <p>Company Name: Spaccio Morocolor</p>
+            <!-- Add more information as needed -->
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
