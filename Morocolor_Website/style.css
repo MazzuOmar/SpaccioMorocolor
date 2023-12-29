@@ -1,0 +1,149 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+#allArticles{
+    width: 100%;
+}
+
+#errorMessage{
+	display: none;
+	color: red;
+}
+
+#loader {	
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+  margin-top: 40px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.toolbar {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+.image-cell {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    position: relative;
+}
+
+.header-image {
+    max-width: 80%;
+    height: auto;
+}
+
+.search-bar {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.search-input {
+    width: 300px;
+    padding: 8px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 50px;
+}
+
+.article {
+    display: inline-block;
+    margin: 10px;
+    box-sizing: border-box;
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.article:hover {
+    transform: scale(1.05);
+}
+
+.image {
+    max-width: 100%; 
+    height: 15vw; 
+    object-fit: contain; 
+    border-radius: 8px;
+}
+
+h2 {
+    color: #030303;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+p {
+    color: #666;
+    margin-top: 5px;
+}
+
+.price {
+    color: #e44d26;
+    font-weight: bold;
+}
+
+.footer-container {
+    margin-top: auto;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
