@@ -74,7 +74,8 @@ h1 {
 }
 
 .search-input {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     padding: 8px;
     font-size: 1rem;
     border: none;
@@ -85,21 +86,40 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
-    margin: 50px;
+    justify-content: space-evenly;
+    margin: 5%;
 }
 
 .article {
     display: inline-block;
+    flex: 0 0 calc(33.333% - 20px); 
     margin: 10px;
-    box-sizing: border-box;
-    width: 30%;
+    padding-inline: 15px;
+    box-sizing: content-box;
     border: 1px solid #ccc;
-    padding: 10px;
     text-align: center;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 1200px) {
+    .article {
+        flex: 0 0 calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 768px) {
+    .article {
+        flex: 0 0 calc(100% - 20px);
+    }
+}
+
+@media (min-width: 1201px) {
+    .article {
+        display: inline-block;
+        flex-basis: calc(33.333% - 20px); 
+    }
 }
 
 .article:hover {
@@ -108,8 +128,14 @@ h1 {
 
 .image {
     max-width: 100%; 
-    height: 15vw; 
-    object-fit: contain; 
+    height: 15vw;
+    @media (max-width: 1200){
+        height: 25vw;
+    }
+    @media (max-width: 768px) {
+        height: 30vw;
+    }
+    object-fit: contain;
     border-radius: 8px;
 }
 
