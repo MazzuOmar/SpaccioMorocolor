@@ -17,7 +17,7 @@ function convertDriveLink(originalLink) {
     if (fileIdMatch && fileIdMatch[1]) {
         const fileId = fileIdMatch[1];
         // Construct the new link
-        const convertedLink = `http://drive.google.com/uc?export=view&id=${fileId}`;
+        const convertedLink = `https://lh3.google.com/u/0/d/${fileId}`;
         return convertedLink;
     } else {
         // Return the original link if the file ID couldn't be extracted
