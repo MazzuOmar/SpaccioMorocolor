@@ -73,6 +73,40 @@ searchInput.addEventListener("input", function () {
     }
 });
 
+function enlargeImage(imgSrc) {
+    // Create a modal for displaying the enlarged image
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+
+    // Create an image element in the modal
+    const enlargedImage = document.createElement('img');
+    enlargedImage.src = imgSrc;
+
+    // Append the image to the modal
+    modal.appendChild(enlargedImage);
+
+    // Append the modal to the body
+    document.body.appendChild(modal);
+
+    // Close the modal when clicking outside the image
+    modal.addEventListener('click', function() {
+        modal.remove();
+    });
+}
+
+// Event delegation for dynamically created elements
+document.body.addEventListener('click', function(event) {
+    const clickedElement = event.target;
+
+    // Check if the clicked element is an article image
+    if (clickedElement.classList.contains('image')) {
+        // Get the source of the clicked image
+        const imgSrc = clickedElement.src;
+
+        // Enlarge the image
+        enlargeImage(imgSrc);
+    }
+});
 
 fetch("https://api.apispreadsheets.com/data/5QxvjDiW7ZqdkBgg/").then(res=>{
     if (res.status === 200){
