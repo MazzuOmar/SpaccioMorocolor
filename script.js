@@ -108,7 +108,7 @@ document.body.addEventListener('click', function(event) {
     }
 });
 
-fetch("https://api.apispreadsheets.com/data/5QxvjDiW7ZqdkBgg/").then(res=>{
+fetch("https://api.apispreadsheets.com/data/WifCHFsQzJkJ7OQA/").then(res=>{
     if (res.status === 200){
         // SUCCESS
         res.json().then(data=>{
