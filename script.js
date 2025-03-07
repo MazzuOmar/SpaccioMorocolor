@@ -120,7 +120,7 @@ fetch("https://api.apispreadsheets.com/data/WifCHFsQzJkJ7OQA/").then(res=>{
                 rowInfoDiv.classList.add("article")
 
                 let rowName = document.createElement("h2")
-                let rowNameNode = document.createTextNode(rowInfo["Name"])
+                let rowNameNode = document.createTextNode(rowInfo["Description"])
                 rowName.appendChild(rowNameNode)
                 // rowName.classList.add("h2")
 
@@ -130,7 +130,7 @@ fetch("https://api.apispreadsheets.com/data/WifCHFsQzJkJ7OQA/").then(res=>{
                 rowImage.classList.add("image")
 
                 let rowDescription = document.createElement("p")
-                let rowDescriptionNode = document.createTextNode(rowInfo["Description"])
+                let rowDescriptionNode = document.createTextNode(rowInfo["Name"])
                 rowDescription.appendChild(rowDescriptionNode)
                 // rowDescription.classList.add("p")
 
