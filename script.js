@@ -12,15 +12,16 @@ function setErrorDisplay(){
 
 // Function to convert Google Drive image link
 function convertDriveLink(originalLink) {
-    // Extract the file ID from the original link
-    const fileIdMatch = originalLink.match(/(?:\/file\/d\/|id=)([^\/\?]+)/);
+    // Estrae l'ID del file dall'URL originale
+    const fileIdMatch = originalLink.match(/(?:\/file\/d\/|id=)([a-zA-Z0-9_-]+)/);
+    
     if (fileIdMatch && fileIdMatch[1]) {
         const fileId = fileIdMatch[1];
-        // Construct the new link
-        const convertedLink = `https://lh3.google.com/u/0/d/${fileId}`;
+        // Costruisce un link alternativo e più stabile per l'incorporamento diretto
+        const convertedLink = `https://lh3.googleusercontent.com/d/${fileId}`;
         return convertedLink;
     } else {
-        // Return the original link if the file ID couldn't be extracted
+        // Ritorna il link originale se non è stato possibile estrarre l'ID
         return originalLink;
     }
 }
